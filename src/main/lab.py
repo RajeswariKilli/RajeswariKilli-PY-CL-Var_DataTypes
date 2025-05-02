@@ -61,7 +61,7 @@ def demonstrate_tuple():
     element3 = 3
 
     # Create the tuple
-    my_tuple = ("element1", "element2","element3")
+    my_tuple = (element1, element2,element3)
     
     return my_tuple
 
@@ -122,7 +122,7 @@ def demonstrate_dictionary():
     value2 = 'value2'
 
     # Create the dictionary
-    my_dict = None
+    my_dict = {key1:value1, key2:value2}
     
     return my_dict
 
@@ -176,6 +176,8 @@ def demonstrate_variable_scope():
         
 
     function1()  # Call function1 to demonstrate variable scope
-    print("Inside function1 - local_var1:", local_var1)  
     print("Outside function1 - global_var:", global_var)
-    return None
+    try:
+        print("Outside function1 - local_var1:", local_var1)
+    except NameError:
+        print("Error: local_var1 is not defined outside function1")
