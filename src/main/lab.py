@@ -61,7 +61,7 @@ def demonstrate_tuple():
     element3 = 3
 
     # Create the tuple
-    my_tuple = ("element1", "element2","element3")
+    my_tuple = (element1, element2,element3)
     
     return my_tuple
 
